@@ -1,3 +1,6 @@
+#!python
+#cython: language_level=3
+
 import numpy as np
 cimport numpy as np
 np.import_array()
@@ -220,4 +223,3 @@ cpdef int cdot(double [:,:] A,
             for k in range(A.shape[1]):
                 T += A[i,k] * B[k,j]
             C[i,j] = T
-    
